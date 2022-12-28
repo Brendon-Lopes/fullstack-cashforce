@@ -1,11 +1,18 @@
+<script setup lang="ts">
+import Table from "./TableComponent.vue";
+</script>
+
 <template>
   <main>
     <hr />
+
     <header>
       <img src="../assets/iconHandsBlue.svg" alt="ícone aperto de mãos" />
       <h3>Notas fiscais</h3>
-      <p>Visualize as notas fiscais que você tem</p>
+      <p>Visualize as notas fiscais que você tem.</p>
     </header>
+
+    <Table />
   </main>
 </template>
 
