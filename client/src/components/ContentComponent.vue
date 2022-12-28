@@ -28,6 +28,7 @@ main {
   background-color: white;
   box-shadow: 0px 10px 30px rgba(225, 229, 236, 0.5);
   width: 100%;
+  min-width: fit-content;
   border-radius: 15px 0 0 15px;
 }
 header {

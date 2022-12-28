@@ -1,9 +1,6 @@
 @import './base.css';
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-  }
   #app {
     width: 100%;
   }
