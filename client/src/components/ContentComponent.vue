@@ -34,7 +34,6 @@ main {
 header {
   margin-left: 48px;
   margin-top: 40px;
-  margin-bottom: 22px;
 }
 img {
   width: 24px;
