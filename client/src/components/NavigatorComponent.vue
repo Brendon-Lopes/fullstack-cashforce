@@ -19,14 +19,13 @@
 <style scoped>
 navigator {
   display: flex;
-  position: absolute;
-  width: 100vw;
+  width: 288px;
   height: 100vh;
-  background-color: #fbfdfe;
+  background-color: var(--base-background);
   flex-direction: column;
 }
 .logo {
-  margin: 25px 24px;
+  margin: 24px;
   width: 160px;
   height: 30px;
 }
@@ -36,7 +35,7 @@ navigator {
 }
 .navigator-item:hover {
   cursor: pointer;
-  background-color: #ececec;
+  background-color: var(--background-hover);
 }
 .highlight-bar {
   width: 4px;
