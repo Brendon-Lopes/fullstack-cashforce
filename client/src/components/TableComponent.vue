@@ -1,41 +1,46 @@
 <template>
-  <table>
-    <tr>
-      <th>NOTA FISCAL</th>
-      <th>SACADO</th>
-      <th>CEDENTE</th>
-      <th>EMISSÃO</th>
-      <th>VALOR</th>
-      <th>STATUS</th>
-    </tr>
+  <div class="table-wrapper">
+    <table>
+      <tr>
+        <th>NOTA FISCAL</th>
+        <th>SACADO</th>
+        <th>CEDENTE</th>
+        <th>EMISSÃO</th>
+        <th>VALOR</th>
+        <th>STATUS</th>
+      </tr>
 
-    <tr class="row">
-      <td>1234</td>
-      <td>SACADO 001</td>
-      <td>CEDENTE 002</td>
-      <td>12/02/2022</td>
-      <td>R$ 49.000,00</td>
-      <td>RECEBIDA E CONFIRMADA</td>
-      <td>
-        <div class="table-btn">Dados do cedente</div>
-      </td>
-    </tr>
+      <tr class="row">
+        <td>1234</td>
+        <td>SACADO 001</td>
+        <td>CEDENTE 002</td>
+        <td>12/02/2022</td>
+        <td>R$ 49.000,00</td>
+        <td>RECEBIDA E CONFIRMADA</td>
+        <td>
+          <div class="table-btn">Dados do cedente</div>
+        </td>
+      </tr>
 
-    <tr class="row">
-      <td>1234</td>
-      <td>SACADO 001</td>
-      <td>CEDENTE 002</td>
-      <td>12/02/2022</td>
-      <td>R$ 49.000,00</td>
-      <td>RECEBIDA E CONFIRMADA</td>
-      <td>
-        <div class="table-btn">Dados do cedente</div>
-      </td>
-    </tr>
-  </table>
+      <tr class="row">
+        <td>1234</td>
+        <td>SACADO 001</td>
+        <td>CEDENTE 002</td>
+        <td>12/02/2022</td>
+        <td>R$ 49.000,00</td>
+        <td>RECEBIDA E CONFIRMADA</td>
+        <td>
+          <div class="table-btn">Dados do cedente</div>
+        </td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <style scoped>
+.table-wrapper {
+  overflow-x: auto;
+}
 table {
   margin: auto;
   width: calc(100% - 96px);
