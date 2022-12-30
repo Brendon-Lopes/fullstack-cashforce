@@ -1,4 +1,5 @@
-import { AllowNull, Column, CreatedAt, Default, Model, Table, UpdatedAt } from 'sequelize-typescript'
+import { AllowNull, BelongsTo, Column, CreatedAt, Default, ForeignKey, Model, Table, UpdatedAt } from 'sequelize-typescript'
+import { Cnpj } from './Cnpj'
 
 @Table({ tableName: 'buyers' })
 export class Buyer extends Model<Buyer> {
@@ -103,11 +104,14 @@ export class Buyer extends Model<Buyer> {
   @Column
     updatedAt!: Date
 
-  // TODO: adicionar relação com a tabela de cnpj
+  @ForeignKey(() => Cnpj)
   @Default(null)
   @AllowNull
   @Column
     cnpjId?: number
+
+  @BelongsTo(() => Cnpj)
+    cnpj?: Cnpj
 
   @Default(1)
   @Column
