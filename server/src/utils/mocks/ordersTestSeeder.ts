@@ -1,4 +1,4 @@
-export const ordersMock = [
+export const ordersTestSeeder = [
   {
     id: 1,
     orderNfId: '1605181324132',
