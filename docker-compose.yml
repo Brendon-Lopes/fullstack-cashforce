@@ -1,6 +1,20 @@
 version: '3.9'
 
 services:
+  server:
+    container_name: cashforce_api
+    build: ./server
+    ports:
+      - 3001:3001
+    restart: always
+    env_file:
+      - ./server/.env
+    environment:
+      - DB_HOST=db
+    depends_on:
+      db:
+        condition: service_healthy
+
   db:
     image: mysql:8.0
     container_name: cashforce_db
@@ -10,6 +24,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       timeout: 10s
       retries: 5
