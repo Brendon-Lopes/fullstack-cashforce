@@ -12,6 +12,7 @@ const sequelize = new Sequelize({
   dialectOptions: {
     multipleStatements: true
   },
+  repositoryMode: true,
   models: [path.join(__dirname, '/models')]
 })
 
