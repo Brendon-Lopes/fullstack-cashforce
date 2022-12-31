@@ -4,14 +4,14 @@ import { Order } from '../database/models/Order'
 import { Buyer } from '../database/models/Buyer'
 import { Provider } from '../database/models/Provider'
 import { testDatabase } from '../utils/testDatabase'
-import { ordersMock } from '../utils/mocks/ordersMocks'
+import { ordersTestSeeder } from '../utils/testSeeders/ordersTestSeeder'
 
 const { expect } = chai
 
 describe('GetAllOrdersRepository class', () => {
   before(async () => {
     await testDatabase.sync({ force: true })
-    await testDatabase.getRepository(Order).bulkCreate(ordersMock as unknown as Order[])
+    await testDatabase.getRepository(Order).bulkCreate(ordersTestSeeder as unknown as Order[])
   })
 
   after(async () => {
