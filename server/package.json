@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run db:create && tsnd --respawn --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
+    "start": "tsnd --respawn --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
+    "dev": "npm run db:create && npm start",
     "db:create": "ts-node --transpile-only src/database/create.ts",
-    "test": "mocha --require ts-node/register 'src/**/**/*.spec.ts' --exit"
+    "test": "mocha --require ts-node/register 'src/**/*.spec.ts' --exit"
   },
   "keywords": [],
   "author": "",
