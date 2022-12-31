@@ -3,8 +3,8 @@ import { GetAllOrdersRepository } from './GetAllOrdersRepository'
 import { Order } from '../database/models/Order'
 import { Buyer } from '../database/models/Buyer'
 import { Provider } from '../database/models/Provider'
-import { testDatabase } from '../utils/testDatabase'
-import { ordersTestSeeder } from '../utils/testSeeders/ordersTestSeeder'
+import { testDatabase } from '../tests/testDatabase'
+import { ordersTestSeeder } from '../tests/testSeeders/ordersTestSeeder'
 
 const { expect } = chai
 

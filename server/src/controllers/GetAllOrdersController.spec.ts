@@ -8,9 +8,9 @@ import { Order } from '../database/models/Order'
 import { Provider } from '../database/models/Provider'
 import { GetAllOrdersRepository } from '../repositories/GetAllOrdersRepository'
 import { GetAllOrdersUseCase } from '../useCases/GetAllOrdersUseCase'
-import { testDatabase } from '../utils/testDatabase'
+import { testDatabase } from '../tests/testDatabase'
 import { GetAllOrdersController } from './GetAllOrdersController'
-import { ordersTestSeeder } from '../utils/testSeeders/ordersTestSeeder'
+import { ordersTestSeeder } from '../tests/testSeeders/ordersTestSeeder'
 
 const { expect } = chai
 
