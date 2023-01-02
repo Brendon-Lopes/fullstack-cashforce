@@ -1,5 +1,5 @@
 <template>
-  <navigator>
+  <nav>
     <img src="../assets/logo.svg" class="logo" alt="cashforce logo" />
 
     <section>
@@ -13,7 +13,7 @@
         <p class="navigator-item-text">Notas fiscais</p>
       </div>
     </section>
-  </navigator>
+  </nav>
 </template>
 
 <style scoped>
