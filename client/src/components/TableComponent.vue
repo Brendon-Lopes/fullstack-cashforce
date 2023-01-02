@@ -2,6 +2,8 @@
 import { ref, onMounted } from "vue";
 import type { IOrder } from "@/interfaces/IOrder";
 import { ordersApi } from "@/providers/api";
+import { transformDate } from "@/utils/transformDate";
+import { transformPrice } from "@/utils/transformPrice";
 
 export default {
   name: "TableComponent",
@@ -18,6 +20,8 @@ export default {
 
     return {
       tableData,
+      transformDate,
+      transformPrice,
     };
   },
 };
@@ -39,8 +43,8 @@ export default {
         <td>{{ order.id }}</td>
         <td>{{ order.buyer.name }}</td>
         <td>{{ order.provider.name }}</td>
-        <td>{{ order.emissionDate }}</td>
-        <td>{{ order.value }}</td>
+        <td>{{ transformDate(order.emissionDate) }}</td>
+        <td>{{ transformPrice(order.value) }}</td>
         <td>{{ order.orderStatusBuyer }}</td>
         <td>
           <div class="table-btn">Dados do cedente</div>
