@@ -1,3 +1,28 @@
+<script lang="ts">
+import { ref, onMounted } from "vue";
+import type { IOrder } from "@/interfaces/IOrder";
+import { ordersApi } from "@/providers/api";
+
+export default {
+  name: "TableComponent",
+
+  setup() {
+    const tableData = ref<IOrder[]>([]);
+
+    const getOrders = async () => {
+      const response = await ordersApi.get("/");
+      tableData.value = response.data;
+    };
+
+    onMounted(getOrders);
+
+    return {
+      tableData,
+    };
+  },
+};
+</script>
+
 <template>
   <div class="table-wrapper">
     <table>
@@ -10,25 +35,13 @@
         <th>STATUS</th>
       </tr>
 
-      <tr class="row">
-        <td>1234</td>
-        <td>SACADO 001</td>
-        <td>CEDENTE 002</td>
-        <td>12/02/2022</td>
-        <td>R$ 49.000,00</td>
-        <td>RECEBIDA E CONFIRMADA</td>
-        <td>
-          <div class="table-btn">Dados do cedente</div>
-        </td>
-      </tr>
-
-      <tr class="row">
-        <td>1234</td>
-        <td>SACADO 001</td>
-        <td>CEDENTE 002</td>
-        <td>12/02/2022</td>
-        <td>R$ 49.000,00</td>
-        <td>RECEBIDA E CONFIRMADA</td>
+      <tr class="row" v-for="order in tableData" :key="order.id">
+        <td>{{ order.id }}</td>
+        <td>{{ order.buyer.name }}</td>
+        <td>{{ order.provider.name }}</td>
+        <td>{{ order.emissionDate }}</td>
+        <td>{{ order.value }}</td>
+        <td>{{ order.orderStatusBuyer }}</td>
         <td>
           <div class="table-btn">Dados do cedente</div>
         </td>
