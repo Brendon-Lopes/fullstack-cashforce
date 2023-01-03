@@ -1,0 +1,132 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cashforce API",
+    "description": "API used to manage the Cashforce database",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Local server"
+    }
+  ],
+  "paths": {
+    "/orders": {
+      "get": {
+        "summary": "Get all orders from database",
+        "description": "Get all orders, including buyer and provider names",
+        "tags": ["Orders"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Order"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Order": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "orderNfId": {
+            "type": "string"
+          },
+          "orderNumber": {
+            "type": "string"
+          },
+          "orderPath": {
+            "type": "string"
+          },
+          "orderFileName": {
+            "type": "string"
+          },
+          "orderOriginalName": {
+            "type": "string"
+          },
+          "emissionDate": {
+            "type": "string"
+          },
+          "pdfFile": {
+            "type": "string"
+          },
+          "emitedTo": {
+            "type": "string"
+          },
+          "nNf": {
+            "type": "string"
+          },
+          "CTE": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
+          },
+          "cnpjId": {
+            "type": "number"
+          },
+          "useId": {
+            "type": "number"
+          },
+          "buyerId": {
+            "type": "number"
+          },
+          "providerId": {
+            "type": "number"
+          },
+          "orderStatusBuyer": {
+            "type": "string"
+          },
+          "orderStatusProvider": {
+            "type": "string"
+          },
+          "deliveryReceipt": {
+            "type": "string"
+          },
+          "cargoPackingList": {
+            "type": "string"
+          },
+          "deliveryCtrc": {
+            "type": "string"
+          },
+          "buyer": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "provider": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
