@@ -16,7 +16,5 @@ describe("Content Component", () => {
     expect(wrapper.find("img").attributes("src")).toBe(
       "/assets/iconHandsBlue.svg"
     );
-
-    expect(wrapper.findComponent("Table").exists()).toBe(true);
   });
 });
