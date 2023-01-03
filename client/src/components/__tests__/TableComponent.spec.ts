@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import TableComponent from "@/components/TableComponent.vue";
 
 describe("Content Component", () => {
   it("renders properly", () => {
-    const wrapper = mount(TableComponent);
+    const wrapper = shallowMount(TableComponent);
 
     expect(wrapper.findAll("th")).toHaveLength(6);
 
