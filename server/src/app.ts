@@ -5,6 +5,7 @@ import cors from 'cors'
 import router from './routes'
 import swaggerUI from 'swagger-ui-express'
 import swaggerDocument from './docs/swagger.json'
+import globalErrorHandler from './utils/globalErrorHandler'
 
 export const app = express()
 
@@ -16,3 +17,5 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 app.get('/', (req, res) => res.status(418).send())
 
 app.use(router)
+
+app.use(globalErrorHandler)
