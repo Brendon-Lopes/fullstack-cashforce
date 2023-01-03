@@ -10,7 +10,8 @@ services:
     env_file:
       - ./client/.env
     depends_on:
-      - server
+      server:
+        condition: service_healthy
 
   server:
     container_name: cashforce_api
@@ -25,6 +26,10 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "lsof", "-t", "-i:3001" ]
+      timeout: 10s
+      retries: 5
 
   db:
     image: mysql:8.0
