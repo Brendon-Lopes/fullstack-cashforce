@@ -55,6 +55,7 @@
 ### A documentação da API pode ser acessada no link abaixo:
 
 - [http://localhost:3001/api-docs](http://localhost:3001/api-docs/)
+  - É necessário que o projeto esteja rodando para acessar a documentação.
 
 # Aspectos Técnicos
 
@@ -62,11 +63,11 @@
 
   O projeto foi feito utilizando tecnologias do ecossistema JavaScript.
 
-  Foi utilizado o eslint para manter o padrão de código.
-
   Todo o projeto contém testes unitários e end to end, tanto no frontend quanto no backend.
 
   Todo o código foi feito tendo em mente boas práticas de desenvolvimento, como Clean Code e SOLID, para facilitar a manutenção e organização do projeto.
+
+  Foi utilizado o eslint para manter o padrão de código.
 
   O docker e docker-compose foram utilizados para facilitar a configuração do ambiente de desenvolvimento.
 
