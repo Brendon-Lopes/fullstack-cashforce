@@ -3,23 +3,31 @@
 # Sumário
 
 - [Descrição](#descrição)
-- [Como rodar o projeto](#como-rodar-o-projeto)
+- [Deploy](#deploy)
+- [Como rodar o projeto localmente](#como-rodar-o-projeto-localmente)
   - [Pré-requisitos](#pré-requisitos)
   - [Passo a passo](#passo-a-passo)
 - [Documentação da API](#documentação-da-api)
 - [Aspectos Técnicos](#aspectos-técnicos)
-  - [• Geral](#•-geral)
-  - [• Frontend](#•-frontend)
-  - [• Backend](#•-backend)
+  - [Geral](#•-geral)
+  - [Frontend](#•-frontend)
+  - [Backend](#•-backend)
 - [Como rodar os testes automatizados](#como-rodar-os-testes-automatizados)
   - [Frontend](#frontend)
   - [Backend](#backend)
+- [Considerações Finais](#considerações-finais)
 
 # Descrição
 
   A aplicação Fullstack simula um sistema da Cashforce onde é possível o cliente visualizar todas as suas notas fiscais, contendo informações como: número da nota, data de emissão, valor total, status da nota e etc.
 
-# Como rodar o projeto
+# Deploy
+
+  ### O deploy do projeto foi realizado no Railway e pode ser acessado no link abaixo:
+
+  - [<h3>https://cashforce-front.up.railway.app/</h3>](https://cashforce-front.up.railway.app/)
+
+# Como rodar o projeto localmente
 
 ## Pré-requisitos
 
@@ -60,12 +68,13 @@
 # Aspectos Técnicos
 
 ## • Geral
-
   O projeto foi feito utilizando tecnologias do ecossistema JavaScript.
 
   Todo o projeto contém testes unitários e end to end, tanto no frontend quanto no backend.
 
   Todo o código foi feito tendo em mente boas práticas de desenvolvimento, como Clean Code e SOLID, para facilitar a manutenção e organização do projeto.
+
+  Os commits foram feitos seguindo o padrão de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
   Foi utilizado o eslint para manter o padrão de código.
 
@@ -134,4 +143,13 @@
   ```bash
   npm run test:e2e
   ```
+
+# Considerações finais
+Apesar de ter experiência desenvolvendo algumas aplicações Fullstack, esse foi o meu primeiro contato com Vue.js (usava React.js), foi uma ótima oportunidade de aprendizado e me ajudou a conhecer melhor o framework, que inclusive gostei bastante de usar! Apesar de alguns pontos que necessitaram de uma pequena curva de aprendizado (como especifidades do framework), foi uma experiência de desenvolvimento bem fluida, principalmente por conta da documentação bem completa do Vue.
+
+O desenvolvimento do Backend foi bem tranquilo, já que é o que eu mais pratico e mais gosto no geral. Me desafiei a fazer os testes com um banco de dados em memória ao invés de apenas mockar os dados como estava acostumado. Eu já tinha utilizado Sequelize em projetos com JS puro, mas nunca de uma forma muito fluida em TypeScript, foi uma ótima oportunidade de conhecer a biblioteca sequelize-typescript (indicada na própria documentação do sequelize), ajudou bastante durante o desenvolvimento.
+
+Apesar de não ser proposto no desafio, fiz o deploy da aplicação completa no Railway. Foi um desafio bem interessante, principalmente por precisar adaptar o código pra ambientes diferentes (desenvolvimento e produção). O docker e o docker-compose ajudaram demais nesse quesito!
+
+Por fim, gostaria de agradecer a oportunidade de participar desse processo seletivo, foi uma experiência muito boa e aprendi bastante! Espero que gostem do resultado final!
 
