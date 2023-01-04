@@ -42,7 +42,7 @@ export default {
         <td>{{ order.provider.name }}</td>
         <td>{{ transformDate(order.emissionDate) }}</td>
         <td>{{ transformPrice(order.value) }}</td>
-        <td>{{ order.orderStatusBuyer }}</td>
+        <td>{{ order.orderStatusBuyer.toUpperCase() }}</td>
         <td>
           <div class="table-btn">Dados do cedente</div>
         </td>
