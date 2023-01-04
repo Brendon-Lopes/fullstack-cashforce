@@ -20,7 +20,7 @@ const handleNavItemClick = () => {
       <div class="menu-line" />
     </div>
 
-    <div :class="menuOpen ? 'menu-filter' : ''"></div>
+    <div @click="handleMenuClick" :class="menuOpen ? 'menu-filter' : ''"></div>
 
     <nav :class="menuOpen ? 'open' : 'closed'">
       <img src="../assets/logo.svg" class="logo" alt="cashforce logo" />
