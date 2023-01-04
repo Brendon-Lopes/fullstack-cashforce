@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "npm run db:create && npm start",
+    "dev": "npm run db:create && tsnd --respawn --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
     "build": "tsc --build",
     "db:create": "ts-node --transpile-only src/database/create.ts",
     "test": "mocha --require ts-node/register 'src/**/*.spec.ts' --exit",
