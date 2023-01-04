@@ -1,9 +1,5 @@
 export const transformDate = (date: string) => {
-  const transformed = new Date(date);
+  const dateObject = new Date(date);
 
-  return transformed.toLocaleDateString("pt-BR", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
+  return new Intl.DateTimeFormat("pt-BR").format(dateObject);
 };
