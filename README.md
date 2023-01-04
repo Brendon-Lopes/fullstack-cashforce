@@ -27,7 +27,8 @@
 
   ### O deploy do projeto foi realizado no Railway e pode ser acessado no link abaixo:
 
-  - [<h3>https://cashforce-front.up.railway.app/</h3>](https://cashforce-front.up.railway.app/)
+  - [https://cashforce-front.up.railway.app/](https://cashforce-front.up.railway.app/)
+    - Pode estar offline dependendo da disponibilidade do plano gratuito do Railway.
 
 # Como rodar o projeto localmente
 
