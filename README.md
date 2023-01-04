@@ -60,10 +60,11 @@
 
 # Documentação da API
 
-### A documentação da API pode ser acessada no link abaixo:
+### A documentação da API pode ser acessada nos links abaixo:
 
-- [http://localhost:3001/api-docs](http://localhost:3001/api-docs/)
-  - É necessário que o projeto esteja rodando para acessar a documentação.
+- <i>Deploy: </i>[https://api-cashforce.up.railway.app/api-docs/](https://api-cashforce.up.railway.app/api-docs/)
+
+- <i>Local: </i>[http://localhost:3001/api-docs](http://localhost:3001/api-docs/)
 
 # Aspectos Técnicos
 
