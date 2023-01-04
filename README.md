@@ -21,6 +21,8 @@
 
   A aplicação Fullstack simula um sistema da Cashforce onde é possível o cliente visualizar todas as suas notas fiscais, contendo informações como: número da nota, data de emissão, valor total, status da nota e etc.
 
+<img src="./client/src/assets/demo.gif" width="720" alt="Demonstração da estilização e responsividade do frontend" />
+
 # Deploy
 
   ### O deploy do projeto foi realizado no Railway e pode ser acessado no link abaixo:
