@@ -12,7 +12,15 @@ import Table from "./TableComponent.vue";
       <p>Visualize as notas fiscais que você tem.</p>
     </header>
 
-    <Table />
+    <Suspense>
+      <template #default>
+        <Table />
+      </template>
+
+      <template #fallback>
+        <h2 class="loading">Carregando...</h2>
+      </template>
+    </Suspense>
   </main>
 </template>
 
@@ -52,5 +60,13 @@ p {
   margin-top: 5px;
   font-weight: 400;
   color: var(--subtitle-color);
+}
+.loading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--subtitle-color);
+  margin-left: 48px;
+  margin-top: 40px;
 }
 </style>
