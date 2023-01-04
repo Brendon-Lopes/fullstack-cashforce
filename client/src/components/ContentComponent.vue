@@ -38,6 +38,7 @@ main {
   width: 100%;
   height: 100vh;
   border-radius: 15px 0 0 15px;
+  overflow-y: auto;
 }
 header {
   margin-left: 48px;
@@ -68,5 +69,30 @@ p {
   color: var(--subtitle-color);
   margin-left: 48px;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 1230px) {
+  header {
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  hr {
+    margin-top: 48px;
+  }
+  header {
+    margin-left: 12px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  hr {
+    margin-top: 62px;
+  }
+  main {
+    border-radius: 0;
+  }
 }
 </style>

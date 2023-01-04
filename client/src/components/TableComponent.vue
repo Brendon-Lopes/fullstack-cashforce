@@ -54,10 +54,12 @@ export default {
 <style scoped>
 .table-wrapper {
   overflow-x: auto;
+  margin: auto;
+  width: calc(100% - 96px);
 }
 table {
   margin: auto;
-  width: calc(100% - 96px);
+  width: 100%;
   text-align: left;
   border-spacing: 0 16px;
 }
@@ -107,5 +109,28 @@ td:nth-child(6) {
   background-color: var(--base-green);
   color: whitesmoke;
   border: 1px solid white;
+}
+
+@media screen and (max-width: 1230px) {
+  .table-wrapper {
+    width: calc(100% - 48px);
+  }
+  td,
+  th {
+    padding: 6px 15px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .table-wrapper {
+    width: calc(100% - 12px);
+  }
+  td,
+  th {
+    padding: 6px 10px;
+  }
+  td {
+    font-size: 12px;
+  }
 }
 </style>
