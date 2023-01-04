@@ -1,5 +1,5 @@
 <script lang="ts">
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import type { IOrder } from "@/interfaces/IOrder";
 import { ordersApi } from "@/providers/api";
 import { transformDate } from "@/utils/transformDate";
@@ -8,15 +8,12 @@ import { transformPrice } from "@/utils/transformPrice";
 export default {
   name: "TableComponent",
 
-  setup() {
+  async setup() {
     const tableData = ref<IOrder[]>([]);
 
-    const getOrders = async () => {
-      const response = await ordersApi.get("/");
+    await ordersApi.get("/").then((response) => {
       tableData.value = response.data;
-    };
-
-    onMounted(getOrders);
+    });
 
     return {
       tableData,
