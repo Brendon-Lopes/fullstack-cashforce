@@ -1,7 +1,7 @@
 import { Column, CreatedAt, Default, Model, Table, UpdatedAt } from 'sequelize-typescript'
 
 @Table({ tableName: 'users' })
-export class User extends Model<User> {
+export class User extends Model {
   @Column
     name!: string
 

@@ -5,7 +5,7 @@ import { Provider } from './Provider'
 import { User } from './User'
 
 @Table({ tableName: 'orders' })
-export class Order extends Model<Order> {
+export class Order extends Model {
   @Column
     orderNfId!: string
 
