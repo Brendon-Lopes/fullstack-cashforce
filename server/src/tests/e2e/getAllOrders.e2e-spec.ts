@@ -7,7 +7,6 @@ import { Order } from '../../database/models/Order'
 import { Provider } from '../../database/models/Provider'
 import { GetAllOrdersRepository } from '../../repositories/GetAllOrdersRepository'
 import { testDatabase } from '../testDatabase'
-import { ordersTestSeeder } from '../testSeeders/ordersTestSeeder'
 
 const { expect } = chai
 
@@ -15,9 +14,6 @@ chai.use(chaiHttp)
 
 describe('GET /orders', () => {
   before(async () => {
-    await testDatabase.sync({ force: true })
-    await testDatabase.getRepository(Order).bulkCreate(ordersTestSeeder as unknown as Order[])
-
     sinon.stub(GetAllOrdersRepository.prototype, 'execute').callsFake(
       async () => {
         return await testDatabase.getRepository(Order).findAll({
@@ -55,6 +51,6 @@ describe('GET /orders', () => {
     expect(res.body[0]).to.have.property('orderStatusBuyer')
     expect(res.body[0]).to.have.property('createdAt')
     expect(res.body[0]).to.have.property('updatedAt')
-    expect(res.body[0].cnpjId).to.be.equal(null)
+    expect(res.body[0].cnpjId).to.be.equal(1)
   })
 })
