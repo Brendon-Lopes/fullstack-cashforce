@@ -66,7 +66,7 @@
 ### A documentação da API pode ser acessada nos links abaixo:
 
 - <i>Deploy: </i>[https://api-cashforce.up.railway.app/api-docs/](https://api-cashforce.up.railway.app/api-docs/)
-
+  - Pode estar offline dependendo da disponibilidade do plano gratuito do Railway.
 - <i>Local: </i>[http://localhost:3001/api-docs](http://localhost:3001/api-docs/)
 
 # Aspectos Técnicos
@@ -149,9 +149,11 @@
   ```
 
 # Considerações finais
-Apesar de ter experiência desenvolvendo algumas aplicações Fullstack, esse foi o meu primeiro contato com Vue.js (usava React.js), foi uma ótima oportunidade de aprendizado e me ajudou a conhecer melhor o framework, que inclusive gostei bastante de usar! Apesar de alguns pontos que necessitaram de uma pequena curva de aprendizado (como especifidades do framework), foi uma experiência de desenvolvimento bem fluida, principalmente por conta da documentação bem completa do Vue.
+Apesar de ter experiência desenvolvendo algumas aplicações Fullstack, esse foi o meu primeiro contato com Vue.js (usava React.js), foi uma ótima oportunidade de aprendizado e me ajudou a conhecer melhor o framework, que inclusive gostei bastante de usar! Apesar de alguns pontos que necessitaram de uma pequena curva de aprendizado (como especifidades do framework, e o fato da versão 3 ser relativamente nova), foi uma experiência de desenvolvimento bem fluida, principalmente por conta da documentação bem completa do Vue.
 
 O desenvolvimento do Backend foi bem tranquilo, já que é o que eu mais pratico e mais gosto no geral. Me desafiei a fazer os testes com um banco de dados em memória ao invés de apenas mockar os dados como estava acostumado. Eu já tinha utilizado Sequelize em projetos com JS puro, mas nunca de uma forma muito fluida em TypeScript, foi uma ótima oportunidade de conhecer a biblioteca sequelize-typescript (indicada na própria documentação do sequelize), ajudou bastante durante o desenvolvimento.
+
+Se eu tivesse mais tempo pra esse desafio, gostaria de estudar melhor como o Vue funciona por baixo dos panos e as suas outras funcionalidades básicas (rotas, gerenciamento de estado, etc). Também faria um CSS mais organizado e quem sabe utilizar algum framework de CSS (como o tailwindcss, que eu gosto bastante ou o styled-components)
 
 Apesar de não ser proposto no desafio, fiz o deploy da aplicação completa no Railway. Foi um desafio bem interessante, principalmente por precisar adaptar o código pra ambientes diferentes (desenvolvimento e produção). O docker e o docker-compose ajudaram demais nesse quesito!
 
