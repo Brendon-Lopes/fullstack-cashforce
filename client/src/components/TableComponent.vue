@@ -4,11 +4,14 @@ import type { IOrder } from "@/interfaces/IOrder";
 import { ordersApi } from "@/providers/api";
 import { transformDate } from "@/utils/transformDate";
 import { transformPrice } from "@/utils/transformPrice";
+import { useToast } from "vue-toastification";
 
 export default {
   name: "TableComponent",
 
   async setup() {
+    const toast = useToast();
+
     const tableData = ref<IOrder[]>([]);
 
     await ordersApi.get("/").then((response) => {
@@ -19,6 +22,7 @@ export default {
       tableData,
       transformDate,
       transformPrice,
+      toast,
     };
   },
 };
@@ -44,7 +48,9 @@ export default {
         <td>{{ transformPrice(order.value) }}</td>
         <td>{{ order.orderStatusBuyer.toUpperCase() }}</td>
         <td>
-          <div class="table-btn">Dados do cedente</div>
+          <div @click="toast('Work in progress! =)')" class="table-btn">
+            Dados do cedente
+          </div>
         </td>
       </tr>
     </table>
@@ -103,6 +109,7 @@ td:nth-child(6) {
   border: 1px solid #cad3ff;
   border-radius: 24px;
   text-align: center;
+  transition: 0.2s;
 }
 .table-btn:hover {
   cursor: pointer;
