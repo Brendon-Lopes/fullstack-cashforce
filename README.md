@@ -100,8 +100,6 @@
 
   O código foi desenvolvido utilizando um padrão de POO, com o uso de classes e interfaces, seguindo os princípios de SOLID.
 
-  A criação e população do banco de dados foi feita utilizando uma query SQL, que pode ser encontrada no arquivo econtrado em `server/src/database/queries/createDatabase.sql` (query disponibilizada pela equipe do Cashforce, com algumas pequenas alterações)
-
   Os testes unitários foram feitos utilizando Mocha, Chai e Sinon. E os testes end to end usando Mocha, Chai, Sinon e chai-http.
 
   Foi utilizado também um banco de dados em memória para rodar os testes de forma mais confiável. Utilizar boas práticas do SOLID fez bastante diferença nessa etapa, já que a classe de Repository espera que o banco de dados seja passado em seu construtor, facilitando a troca de banco de dados.
@@ -143,7 +141,7 @@
   npm test
   ```
 
-  3. Para rodar os testss end to end. <strong>(OBS.: É necessário que o projeto esteja rodando, para que o chai-http consiga acessar a aplicação)</strong>
+  3. Para rodar os testes end to end.
   ```bash
   npm run test:e2e
   ```
@@ -153,7 +151,7 @@ Apesar de ter experiência desenvolvendo algumas aplicações Fullstack, esse fo
 
 O desenvolvimento do Backend foi bem tranquilo, já que é o que eu mais pratico e mais gosto no geral. Me desafiei a fazer os testes com um banco de dados em memória ao invés de apenas mockar os dados como estava acostumado. Eu já tinha utilizado Sequelize em projetos com JS puro, mas nunca de uma forma muito fluida em TypeScript, foi uma ótima oportunidade de conhecer a biblioteca sequelize-typescript (indicada na própria documentação do sequelize), ajudou bastante durante o desenvolvimento.
 
-Se eu tivesse mais tempo pra esse desafio, gostaria de estudar melhor como o Vue funciona por baixo dos panos e as suas outras funcionalidades básicas (rotas, gerenciamento de estado, etc). Também faria um CSS mais organizado e quem sabe utilizar algum framework de CSS (como o tailwindcss, que eu gosto bastante ou o styled-components)
+Se eu tivesse mais tempo pra esse desafio, gostaria de estudar melhor como o Vue funciona por baixo dos panos e as suas outras funcionalidades básicas (rotas, gerenciamento de estado, etc). Também faria um CSS mais organizado e quem sabe utilizar algum framework de CSS (como o tailwindcss, que gosto bastante). Também deixaria os testes muito mais completos e cobrindo mais cenários.
 
 Apesar de não ser proposto no desafio, fiz o deploy da aplicação completa no Railway. Foi um desafio bem interessante, principalmente por precisar adaptar o código pra ambientes diferentes (desenvolvimento e produção). O docker e o docker-compose ajudaram demais nesse quesito!
 
