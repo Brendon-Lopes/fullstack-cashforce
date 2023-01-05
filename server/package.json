@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/seed.js && node dist/index.js",
+    "start": "node dist/database/seed.js && node dist/index.js",
     "dev": "npm run db:create && npm run db:seed && tsnd --respawn --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
-    "build": "tsc --build",
+    "build": "tsc -p tsconfig.build.json",
     "db:create": "ts-node --transpile-only src/database/create.ts",
     "db:seed": "ts-node --transpile-only src/database/seed.ts",
     "test": "mocha --require ts-node/register 'src/**/*.spec.ts' --exit",
