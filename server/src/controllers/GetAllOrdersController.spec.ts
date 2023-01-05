@@ -10,7 +10,6 @@ import { GetAllOrdersRepository } from '../repositories/GetAllOrdersRepository'
 import { GetAllOrdersUseCase } from '../useCases/GetAllOrdersUseCase'
 import { testDatabase } from '../tests/testDatabase'
 import { GetAllOrdersController } from './GetAllOrdersController'
-import { ordersTestSeeder } from '../tests/testSeeders/ordersTestSeeder'
 
 const { expect } = chai
 
@@ -29,8 +28,6 @@ describe('GetAllOrdersController class', () => {
   before(async () => {
     res.status = sinon.stub().returns(res)
     res.json = sinon.stub()
-    await testDatabase.sync({ force: true })
-    await testDatabase.getRepository(Order).bulkCreate(ordersTestSeeder as unknown as Order[])
   })
 
   it('should return status code 200 (OK)', async () => {

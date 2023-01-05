@@ -1,7 +1,5 @@
 import mysql from 'mysql2/promise'
 import 'dotenv/config'
-import { readFileSync } from 'fs'
-import path from 'path'
 
 const createDatabase = async (): Promise<void> => {
   const connection = await mysql.createConnection({
@@ -11,10 +9,8 @@ const createDatabase = async (): Promise<void> => {
     multipleStatements: true
   })
 
-  const query = readFileSync(path.join(__dirname, 'queries/createDatabase.sql'), 'utf8')
-
   try {
-    await connection.query(query)
+    await connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME ?? 'cashforce'}`)
     console.log('Database created successfully')
   } catch (err: any) {
     console.log('Database creation failed')
@@ -24,7 +20,6 @@ const createDatabase = async (): Promise<void> => {
 
 createDatabase()
   .catch((err: any) => {
-    console.log('Database creation failed')
     console.log(err.message)
   })
   .finally(() => process.exit(0))

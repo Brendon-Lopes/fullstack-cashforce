@@ -3,7 +3,7 @@ import { Order } from './Order'
 import { Sponsor } from './Sponsor'
 
 @Table({ tableName: 'offers' })
-export class Offer extends Model<Offer> {
+export class Offer extends Model {
   @Column
     tax!: string
 

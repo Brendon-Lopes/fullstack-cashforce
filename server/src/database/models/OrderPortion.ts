@@ -2,7 +2,7 @@ import { BelongsTo, Column, CreatedAt, Default, ForeignKey, Model, Table, Update
 import { Order } from './Order'
 
 @Table({ tableName: 'orderportions' })
-export class OrderPortion extends Model<OrderPortion> {
+export class OrderPortion extends Model {
   @Column
     nDup!: string
 

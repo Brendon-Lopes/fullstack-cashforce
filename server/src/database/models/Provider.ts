@@ -2,7 +2,7 @@ import { BelongsTo, Column, CreatedAt, Default, ForeignKey, Model, Table, Update
 import { Cnpj } from './Cnpj'
 
 @Table({ tableName: 'providers' })
-export class Provider extends Model<Provider> {
+export class Provider extends Model {
   @Column
     name!: string
 

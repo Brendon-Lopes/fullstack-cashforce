@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "npm run db:create && tsnd --respawn --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
-    "build": "tsc --build",
+    "start": "node dist/database/seed.js && node dist/index.js",
+    "dev": "npm run db:create && npm run db:seed && tsnd --respawn --transpile-only --exit-child --ignore-watch node_modules src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
     "db:create": "ts-node --transpile-only src/database/create.ts",
-    "test": "mocha --require ts-node/register 'src/**/*.spec.ts' --exit",
-    "test:e2e": "mocha --require ts-node/register 'src/**/*.e2e-spec.ts' --exit"
+    "db:seed": "ts-node --transpile-only src/database/executeSeed.ts",
+    "test": "mocha --require ts-node/register --require 'src/tests/fixtures.ts' 'src/**/*.spec.ts' --exit",
+    "test:e2e": "mocha --require ts-node/register --require 'src/tests/fixtures.ts' 'src/**/*.e2e-spec.ts' --exit"
   },
   "keywords": [],
   "author": "",

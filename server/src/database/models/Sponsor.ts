@@ -2,7 +2,7 @@ import { BelongsTo, Column, CreatedAt, Default, ForeignKey, Model, Table, Update
 import { Cnpj } from './Cnpj'
 
 @Table({ tableName: 'sponsors' })
-export class Sponsor extends Model<Sponsor> {
+export class Sponsor extends Model {
   @Column
     name!: string
 

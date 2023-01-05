@@ -2,7 +2,7 @@ import { AllowNull, BelongsTo, Column, CreatedAt, Default, ForeignKey, Model, Ta
 import { Cnpj } from './Cnpj'
 
 @Table({ tableName: 'buyers' })
-export class Buyer extends Model<Buyer> {
+export class Buyer extends Model {
   @Column
     name!: string
 
@@ -115,7 +115,7 @@ export class Buyer extends Model<Buyer> {
 
   @Default(1)
   @Column
-    confirm!: number
+    confirm?: number
 
   @Default(null)
   @AllowNull
