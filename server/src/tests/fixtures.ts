@@ -6,3 +6,8 @@ export async function mochaGlobalSetup (): Promise<void> {
   await seedDatabase(testDatabase)
   console.log('test database synced and seeded')
 }
+
+export async function mochaGlobalTeardown (): Promise<void> {
+  await testDatabase.close()
+  console.log('test database closed')
+}
