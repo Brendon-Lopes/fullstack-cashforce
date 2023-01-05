@@ -1,20 +1,20 @@
-import sequelize from './config'
+import { Sequelize } from 'sequelize-typescript'
 import { Buyer } from './models/Buyer'
 import { Cnpj } from './models/Cnpj'
 import { Order } from './models/Order'
 import { Provider } from './models/Provider'
 import { User } from './models/User'
 
-const seedDatabase = async (): Promise<void> => {
-  await sequelize.sync({ force: true })
+export const seedDatabase = async (sequelizeInstance: Sequelize): Promise<void> => {
+  await sequelizeInstance.sync({ force: true })
 
-  const buyerRepo = sequelize.getRepository(Buyer)
-  const cnpjRepo = sequelize.getRepository(Cnpj)
-  const providerRepo = sequelize.getRepository(Provider)
-  const orderRepo = sequelize.getRepository(Order)
-  const userRepo = sequelize.getRepository(User)
+  const buyerRepo = sequelizeInstance.getRepository(Buyer)
+  const cnpjRepo = sequelizeInstance.getRepository(Cnpj)
+  const providerRepo = sequelizeInstance.getRepository(Provider)
+  const orderRepo = sequelizeInstance.getRepository(Order)
+  const userRepo = sequelizeInstance.getRepository(User)
 
-  const t = await sequelize.transaction()
+  const t = await sequelizeInstance.transaction()
 
   try {
     await cnpjRepo.bulkCreate([
@@ -123,9 +123,3 @@ const seedDatabase = async (): Promise<void> => {
     await t.rollback()
   }
 }
-
-seedDatabase()
-  .catch((err: any) => {
-    console.log(err.message)
-  })
-  .finally(() => process.exit(0))
