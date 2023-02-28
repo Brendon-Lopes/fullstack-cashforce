@@ -25,10 +25,10 @@
 
 # Deploy
 
-  ### O deploy do projeto foi realizado no Railway e pode ser acessado no link abaixo:
+  ### *O deploy do projeto foi realizado no Railway e pode ser acessado no link abaixo:
 
-  - [https://cashforce-front.up.railway.app/](https://cashforce-front.up.railway.app/)
-    - Pode estar offline dependendo da disponibilidade do plano gratuito do Railway.
+  - [<s>https://cashforce-front.up.railway.app/</s>](https://cashforce-front.up.railway.app/)
+    - *Offline por conta das limitações do plano gratuito do Railway.
 
 # Como rodar o projeto localmente
 
@@ -65,9 +65,9 @@
 
 ### A documentação da API pode ser acessada nos links abaixo:
 
-- <i>Deploy: </i>[https://api-cashforce.up.railway.app/api-docs/](https://api-cashforce.up.railway.app/api-docs/)
-  - Pode estar offline dependendo da disponibilidade do plano gratuito do Railway.
 - <i>Local: </i>[http://localhost:3001/api-docs](http://localhost:3001/api-docs/)
+- <i>Deploy: </i>[<s>https://api-cashforce.up.railway.app/api-docs/</s>](https://api-cashforce.up.railway.app/api-docs/)
+  - *Offline por conta das limitações do plano gratuito do Railway.
 
 # Aspectos Técnicos
 
